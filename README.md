@@ -1,55 +1,6 @@
 <div class="relative flex-col gap-1 md:gap-3"><div class="flex max-w-full flex-col grow"><div data-message-author-role="assistant" data-message-id="8a2817d5-ea91-4e1f-a040-2c27bb1699f4" dir="auto" class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5" data-message-model-slug="o3"><div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"><div class="markdown prose dark:prose-invert w-full break-words dark"><h1 data-start="0" data-end="72" class="">Samsung Art‑Mode Uploader — Comprehensive User &amp; Administrator Guide</h1>
 <p data-start="74" data-end="104" class=""><em data-start="74" data-end="102">(Version 1.0 – April 2025)</em></p>
 <hr data-start="106" data-end="109" class="">
-<h2 data-start="111" data-end="133" class="">Table of Contents</h2>
-<ol data-start="135" data-end="829">
-<li data-start="135" data-end="169" class="">
-<p data-start="138" data-end="169" class=""><a data-start="138" data-end="167" class="" rel="noopener" href="#introduction">Introduction</a></p>
-</li>
-<li data-start="170" data-end="218" class="">
-<p data-start="173" data-end="218" class=""><a data-start="173" data-end="216" class="" rel="noopener" href="#system-requirements">System Requirements</a></p>
-</li>
-<li data-start="219" data-end="253" class="">
-<p data-start="222" data-end="253" class=""><a data-start="222" data-end="251" class="" rel="noopener" href="#installation">Installation</a></p>
-</li>
-<li data-start="254" data-end="302" class="">
-<p data-start="257" data-end="302" class=""><a data-start="257" data-end="300" class="" rel="noopener" href="#first-run-checklist">First‑Run Checklist</a></p>
-</li>
-<li data-start="303" data-end="339" class="">
-<p data-start="306" data-end="339" class=""><a data-start="306" data-end="337" class="" rel="noopener" href="#core-concepts">Core Concepts</a></p>
-</li>
-<li data-start="340" data-end="384" class="">
-<p data-start="343" data-end="384" class=""><a data-start="343" data-end="382" class="" rel="noopener" href="#command-reference">Command Reference</a></p>
-</li>
-<li data-start="385" data-end="466" class="">
-<p data-start="388" data-end="466" class=""><a data-start="388" data-end="464" class="" rel="noopener" href="#global-flags--environment-variables">Global Flags &amp; Environment Variables</a></p>
-</li>
-<li data-start="467" data-end="513" class="">
-<p data-start="470" data-end="513" class=""><a data-start="470" data-end="511" class="" rel="noopener" href="#detailed-workflows">Detailed Workflows</a></p>
-</li>
-<li data-start="514" data-end="554" class="">
-<p data-start="517" data-end="554" class=""><a data-start="517" data-end="552" class="" rel="noopener" href="#advanced-topics">Advanced Topics</a></p>
-</li>
-<li data-start="555" data-end="609" class="">
-<p data-start="559" data-end="609" class=""><a data-start="559" data-end="607" class="" rel="noopener" href="#result-matrix">Result Matrix – What to Expect</a></p>
-</li>
-<li data-start="610" data-end="662" class="">
-<p data-start="614" data-end="662" class=""><a data-start="614" data-end="660" class="" rel="noopener" href="#troubleshooting--faq">Troubleshooting &amp; FAQ</a></p>
-</li>
-<li data-start="663" data-end="704" class="">
-<p data-start="667" data-end="704" class=""><a data-start="667" data-end="702" class="" rel="noopener" href="#developer-guide">Developer Guide</a></p>
-</li>
-<li data-start="705" data-end="750" class="">
-<p data-start="709" data-end="750" class=""><a data-start="709" data-end="748" class="" rel="noopener" href="#changelog-summary">Changelog Summary</a></p>
-</li>
-<li data-start="751" data-end="776" class="">
-<p data-start="755" data-end="776" class=""><a data-start="755" data-end="774" class="" rel="noopener" href="#license">License</a></p>
-</li>
-<li data-start="777" data-end="829" class="">
-<p data-start="781" data-end="829" class=""><a data-start="781" data-end="827" class="" rel="noopener" href="#credits--attribution">Credits &amp; Attribution</a></p>
-</li>
-</ol>
-<hr data-start="831" data-end="834" class="">
 <h2 data-start="836" data-end="886" class="">1 &nbsp;| &nbsp;Introduction&lt;a name="introduction"&gt;&lt;/a&gt;</h2>
 <p data-start="888" data-end="1142" class="">Samsung released “Art&nbsp;Mode” on their Frame‑series televisions to let owners display high‑resolution still images when the TV is idle. The <strong data-start="1026" data-end="1055">Samsung Art‑Mode Uploader</strong> (hereafter <em data-start="1067" data-end="1072">SAU</em>) is a command‑line tool that automates every part of that experience:</p>
 <ul data-start="1144" data-end="1625">
