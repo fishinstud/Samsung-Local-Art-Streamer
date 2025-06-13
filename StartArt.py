@@ -9,10 +9,8 @@ import os
 import random
 import re
 import sys
-import tempfile
 import zipfile
 from concurrent.futures import ThreadPoolExecutor
-from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Sequence, Tuple
@@ -367,10 +365,8 @@ def cmd_upload(
     # Collect paths
     if args.stdin_paths:
         paths = [Path(line.strip()) for line in sys.stdin if line.strip()]
-        recursive = False
     else:
         paths = scan_images(args.folder.expanduser().resolve(), recursive=args.recursive)
-        recursive = args.recursive
 
     if not paths:
         logging.info("No images found.")
@@ -456,7 +452,7 @@ def _send_single(
         save_state(state_path, state)
         logging.info("Uploaded: %s (matte=%s)", path.name, matte)
         if show:
-            tv_select(tv, remote, show=False)
+            tv_select(tv, remote, show=show)
     except Exception as exc:  # noqa: BLE001
         logging.error("Single upload failed (%s): %s", path.name, exc)
 
@@ -469,12 +465,13 @@ def _send_zip(
     *,
     now: datetime,
 ) -> None:
-    tmp = tempfile.NamedTemporaryFile(suffix=".zip", delete=False)
-    with zipfile.ZipFile(tmp, "w") as zf:
+    from io import BytesIO
+
+    buf = BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:
         for path, payload, _, _ in items:
             zf.writestr(path.name, payload)
-    tmp.flush()
-    zip_bytes = Path(tmp.name).read_bytes()
+    zip_bytes = buf.getvalue()
 
     try:
         remote_names = tv.art().upload_archive(zip_bytes)  # type: ignore[attr-defined]
