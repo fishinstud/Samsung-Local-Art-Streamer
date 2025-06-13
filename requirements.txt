@@ -1,0 +1,4 @@
+samsungtvws
+Pillow
+tqdm
+tenacity
